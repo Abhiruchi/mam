@@ -18,6 +18,8 @@ class TagsController extends Controller
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
+	
+	
 
 	/**
 	 * Specifies the access control rules.
@@ -82,7 +84,7 @@ class TagsController extends Controller
 			
 			$Log = Logger::getLogger("accessLog");
 	  			$uid=Yii::app()->user->getState("uid");
-	  			$Log->info($uid."\t".Yii::app()->user->name."\t".$model->getModelName()."\tcreate\t".$model->uid);		
+	  			$Log->info($uid."\t".Yii::app()->user->name."\t".$model->getModelName()."\tcreate\t".$model->tagId);		
 			foreach ($_POST['dept_id'] as $key=>$dept_id)
 				{
 			 		$tag_dept = new TagsHasOuStructure;

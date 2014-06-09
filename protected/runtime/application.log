@@ -30925,3 +30925,1074 @@ Stack trace:
 #12 {main}
 REQUEST_URI=/final/index.php/role/permission_change
 ---
+2014/06/09 06:54:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ddmedia".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ddmedia')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/ddmedia
+HTTP_REFERER=http://localhost/final/index.php/organisation/register1
+---
+2014/06/09 06:59:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "ddmedia".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ddmedia')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/ddmedia
+---
+2014/06/09 06:59:23 [error] [exception.CHttpException.500] exception 'CHttpException' with message '/./Documents and Settings is not a valid file path' in C:\xampp\htdocs\final\protected\modules\media\models\DDMediaFile.php:23
+Stack trace:
+#0 C:\xampp\htdocs\final\protected\modules\media\models\DDMediaDirectory.php(51): DDMediaFile->__construct('/./Documents an...')
+#1 C:\xampp\htdocs\final\protected\modules\media\controllers\DefaultController.php(98): DDMediaDirectory->listContent()
+#2 C:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#3 C:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('')
+#7 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('media')
+#8 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#10 {main}
+REQUEST_URI=/final/index.php/media
+---
+2014/06/09 07:00:03 [warning] [application] Failed to set unsafe attribute "uploadedFile" of "DDMediaAction".
+in C:\xampp\htdocs\final\protected\modules\media\controllers\DefaultController.php (51)
+in C:\xampp\htdocs\final\index.php (18)
+2014/06/09 07:00:19 [warning] [application] Failed to set unsafe attribute "uploadedFile" of "DDMediaAction".
+in C:\xampp\htdocs\final\protected\modules\media\controllers\DefaultController.php (51)
+in C:\xampp\htdocs\final\index.php (18)
+2014/06/09 07:00:46 [warning] [application] Failed to set unsafe attribute "uploadedFile" of "DDMediaAction".
+in C:\xampp\htdocs\final\protected\modules\media\controllers\DefaultController.php (51)
+in C:\xampp\htdocs\final\index.php (18)
+2014/06/09 07:02:38 [warning] [application] Failed to set unsafe attribute "uploadedFile" of "DDMediaAction".
+in C:\xampp\htdocs\final\protected\modules\media\controllers\DefaultController.php (51)
+in C:\xampp\htdocs\final\index.php (18)
+2014/06/09 07:20:00 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "fileupload".' in C:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('fileupload')
+#1 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('fileupload')
+#2 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('addasset/fileup...')
+#3 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#5 {main}
+REQUEST_URI=/final/addasset/fileupload
+HTTP_REFERER=http://localhost/final/addasset/onlineeditor
+---
+2014/06/09 07:30:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:30:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:30:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:30:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:30:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:30:53 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:30:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:30:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:30:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:34:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:34:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 07:34:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "b.odp".' in C:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('b.odp')
+#1 C:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/b.odp
+HTTP_REFERER=http://localhost/final/Viewer.js/
+---
+2014/06/09 08:18:40 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'orgId' in 'field list'. The SQL statement executed was: insert into module(name, description, orgId) values('Add asset',
+				'For adding assets', :orgId).
+in F:\my xampp\htdocs\final\protected\controllers\OrganisationController.php (346)
+in F:\my xampp\htdocs\final\index.php (18)
+2014/06/09 08:18:40 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'orgId' in 'field list'. The SQL statement executed was: insert into module(name, description, orgId) values('Add asset',
+				'For adding assets', :orgId)' in F:\my xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\my xampp\htdocs\final\protected\controllers\OrganisationController.php(346): CDbCommand->execute()
+#1 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): OrganisationController->actionRegister1()
+#2 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('register1')
+#11 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('organisation/re...')
+#12 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#14 {main}
+REQUEST_URI=/final/index.php/organisation/register1
+HTTP_REFERER=http://localhost/final/index.php/organisation/register1
+---
+2014/06/09 08:22:16 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'. The SQL statement executed was: insert into module_organisation(name, description, orgId) values('Add asset',
+				'For adding assets', :orgId).
+in F:\my xampp\htdocs\final\protected\controllers\OrganisationController.php (346)
+in F:\my xampp\htdocs\final\index.php (18)
+2014/06/09 08:22:16 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'name' in 'field list'. The SQL statement executed was: insert into module_organisation(name, description, orgId) values('Add asset',
+				'For adding assets', :orgId)' in F:\my xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\my xampp\htdocs\final\protected\controllers\OrganisationController.php(346): CDbCommand->execute()
+#1 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): OrganisationController->actionRegister1()
+#2 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#4 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#6 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#7 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#8 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('register1')
+#11 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('organisation/re...')
+#12 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#14 {main}
+REQUEST_URI=/final/index.php/organisation/register1
+HTTP_REFERER=http://localhost/final/index.php/organisation/register1
+---
+2014/06/09 08:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "properties.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('properties.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/properties.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/create.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rename.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/rename.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/rename.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/update.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/update.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/update.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "move.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('move.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/move.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:24:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "delete.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('delete.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/delete.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rename.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/rename.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/images/rename.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "move.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('move.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/move.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "properties.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('properties.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/properties.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "delete.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('delete.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/delete.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/update.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/update.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/images/update.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:44 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/create.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rename.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/rename.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/images/rename.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "move.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('move.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/move.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/create.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "properties.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('properties.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/properties.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "delete.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('delete.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/delete.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:24:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/update.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/update.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/images/update.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "properties.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('properties.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/properties.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "move.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('move.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/move.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rename.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/rename.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/images/rename.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "delete.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('delete.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/delete.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/update.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/update.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/images/update.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/create.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/create.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/update.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/update.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/images/update.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "move.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('move.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/move.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "properties.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('properties.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/properties.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:18 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "delete.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('delete.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/delete.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rename.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/rename.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/images/rename.png
+HTTP_REFERER=http://localhost/final/ou_structure/tree
+---
+2014/06/09 08:25:50 [error] [exception.CException] exception 'CException' with message 'Tags and its behaviors do not have a method or closure named "getModelName".' in F:\my xampp\htdocs\yii\framework\base\CComponent.php:266
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getModelName', Array)
+#1 F:\my xampp\htdocs\final\protected\controllers\TagsController.php(85): CActiveRecord->__call('getModelName', Array)
+#2 F:\my xampp\htdocs\final\protected\controllers\TagsController.php(85): Tags->getModelName()
+#3 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): TagsController->actionCreate()
+#4 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#11 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#13 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tags/create')
+#14 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/final/index.php/tags/create
+HTTP_REFERER=http://localhost/final/index.php/tags/create
+---
+2014/06/09 08:29:57 [error] [exception.CDbException] exception 'CDbException' with message 'The relation "ou_structure" in active record class "Tags" is specified with an incomplete foreign key. The foreign key must consist of columns referencing both joining tables.' in F:\my xampp\htdocs\yii\framework\db\ar\CActiveFinder.php:614
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(500): CJoinElement->applyLazyCondition(Object(CJoinQuery), Object(Tags))
+#1 F:\my xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(163): CJoinElement->lazyFind(Object(Tags))
+#2 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(281): CActiveFinder->lazyFind(Object(Tags))
+#3 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CActiveRecord->getRelated('ou_structure')
+#4 F:\my xampp\htdocs\final\protected\models\Tags.php(110): CActiveRecord->__get('ou_structure')
+#5 F:\my xampp\htdocs\final\protected\views\tags\view.php(36): Tags->getDepartments()
+#6 F:\my xampp\htdocs\yii\framework\web\CBaseController.php(126): require('F:\\my xampp\\htd...')
+#7 F:\my xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\\my xampp\\htd...', Array, true)
+#8 F:\my xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('F:\\my xampp\\htd...', Array, true)
+#9 F:\my xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#10 F:\my xampp\htdocs\final\protected\controllers\TagsController.php(58): CController->render('view', Array)
+#11 [internal function]: TagsController->actionView('8')
+#12 F:\my xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(TagsController), Array)
+#13 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TagsController), Object(ReflectionMethod), Array)
+#14 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#23 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tags/view')
+#24 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#26 {main}
+REQUEST_URI=/final/index.php/tags/8
+HTTP_REFERER=http://localhost/final/index.php/tags/create
+---
+2014/06/09 08:31:57 [error] [exception.CDbException] exception 'CDbException' with message 'The relation "ou_structure" in active record class "Tags" is specified with an incomplete foreign key. The foreign key must consist of columns referencing both joining tables.' in F:\my xampp\htdocs\yii\framework\db\ar\CActiveFinder.php:614
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(500): CJoinElement->applyLazyCondition(Object(CJoinQuery), Object(Tags))
+#1 F:\my xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(163): CJoinElement->lazyFind(Object(Tags))
+#2 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(281): CActiveFinder->lazyFind(Object(Tags))
+#3 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): CActiveRecord->getRelated('ou_structure')
+#4 F:\my xampp\htdocs\final\protected\models\Tags.php(110): CActiveRecord->__get('ou_structure')
+#5 F:\my xampp\htdocs\final\protected\views\tags\view.php(36): Tags->getDepartments()
+#6 F:\my xampp\htdocs\yii\framework\web\CBaseController.php(126): require('F:\\my xampp\\htd...')
+#7 F:\my xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('F:\\my xampp\\htd...', Array, true)
+#8 F:\my xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('F:\\my xampp\\htd...', Array, true)
+#9 F:\my xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#10 F:\my xampp\htdocs\final\protected\controllers\TagsController.php(58): CController->render('view', Array)
+#11 [internal function]: TagsController->actionView('9')
+#12 F:\my xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(TagsController), Array)
+#13 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(TagsController), Object(ReflectionMethod), Array)
+#14 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#16 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#22 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#23 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('tags/view')
+#24 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#26 {main}
+REQUEST_URI=/final/index.php/tags/9
+HTTP_REFERER=http://localhost/final/index.php/tags/create
+---
+2014/06/09 08:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/create.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "move.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('move.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/move.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rename.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/rename.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/rename.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "properties.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('properties.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/properties.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/update.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/update.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/update.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "delete.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('delete.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/delete.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:15 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (634)
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (324)
+in F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php (112)
+2014/06/09 08:56:15 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in F:\my xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(634): CActiveRecord->insert(NULL)
+#2 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(324): NestedSetBehavior->addNode(Object(Ou_structure), '2', 1, true, NULL)
+#3 [internal function]: NestedSetBehavior->appendTo(Object(Ou_structure))
+#4 F:\my xampp\htdocs\yii\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('appendTo', Array)
+#6 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): CActiveRecord->__call('appendTo', Array)
+#7 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): Ou_structure->appendTo(Object(Ou_structure))
+#8 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): JsTreeBehavior->actionCreateNode()
+#9 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\my xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('createnode')
+#13 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ou_structure/cr...')
+#14 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/final/index.php/ou_structure/createnode
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:25 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (634)
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (324)
+in F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php (112)
+2014/06/09 08:56:25 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in F:\my xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(634): CActiveRecord->insert(NULL)
+#2 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(324): NestedSetBehavior->addNode(Object(Ou_structure), '2', 1, true, NULL)
+#3 [internal function]: NestedSetBehavior->appendTo(Object(Ou_structure))
+#4 F:\my xampp\htdocs\yii\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('appendTo', Array)
+#6 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): CActiveRecord->__call('appendTo', Array)
+#7 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): Ou_structure->appendTo(Object(Ou_structure))
+#8 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): JsTreeBehavior->actionCreateNode()
+#9 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\my xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('createnode')
+#13 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ou_structure/cr...')
+#14 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/final/index.php/ou_structure/createnode
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (634)
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (324)
+in F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php (112)
+2014/06/09 08:56:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in F:\my xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(634): CActiveRecord->insert(NULL)
+#2 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(324): NestedSetBehavior->addNode(Object(Ou_structure), '2', 1, true, NULL)
+#3 [internal function]: NestedSetBehavior->appendTo(Object(Ou_structure))
+#4 F:\my xampp\htdocs\yii\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('appendTo', Array)
+#6 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): CActiveRecord->__call('appendTo', Array)
+#7 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): Ou_structure->appendTo(Object(Ou_structure))
+#8 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): JsTreeBehavior->actionCreateNode()
+#9 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\my xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('createnode')
+#13 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ou_structure/cr...')
+#14 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/final/index.php/ou_structure/createnode
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (634)
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (324)
+in F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php (112)
+2014/06/09 08:56:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in F:\my xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(634): CActiveRecord->insert(NULL)
+#2 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(324): NestedSetBehavior->addNode(Object(Ou_structure), '2', 1, true, NULL)
+#3 [internal function]: NestedSetBehavior->appendTo(Object(Ou_structure))
+#4 F:\my xampp\htdocs\yii\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('appendTo', Array)
+#6 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): CActiveRecord->__call('appendTo', Array)
+#7 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): Ou_structure->appendTo(Object(Ou_structure))
+#8 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): JsTreeBehavior->actionCreateNode()
+#9 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\my xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('createnode')
+#13 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ou_structure/cr...')
+#14 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/final/index.php/ou_structure/createnode
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:56:26 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5).
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (634)
+in F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php (324)
+in F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php (112)
+2014/06/09 08:56:26 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[23000]: Integrity constraint violation: 1452 Cannot add or update a child row: a foreign key constraint fails (`db`.`ou_structure`, CONSTRAINT `ou_structure_ibfk_1` FOREIGN KEY (`orgId`) REFERENCES `organisation` (`orgId`) ON DELETE NO ACTION ON UPDATE NO ACTION). The SQL statement executed was: INSERT INTO `ou_structure` (`name`, `description`, `root`, `lft`, `rgt`, `level`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5)' in F:\my xampp\htdocs\yii\framework\db\CDbCommand.php:358
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1077): CDbCommand->execute()
+#1 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(634): CActiveRecord->insert(NULL)
+#2 F:\my xampp\htdocs\final\protected\behaviors\NestedSetBehavior.php(324): NestedSetBehavior->addNode(Object(Ou_structure), '2', 1, true, NULL)
+#3 [internal function]: NestedSetBehavior->appendTo(Object(Ou_structure))
+#4 F:\my xampp\htdocs\yii\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(227): CComponent->__call('appendTo', Array)
+#6 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): CActiveRecord->__call('appendTo', Array)
+#7 F:\my xampp\htdocs\final\protected\behaviors\JsTreeBehavior.php(112): Ou_structure->appendTo(Object(Ou_structure))
+#8 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): JsTreeBehavior->actionCreateNode()
+#9 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 F:\my xampp\htdocs\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('createnode')
+#13 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('ou_structure/cr...')
+#14 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#16 {main}
+REQUEST_URI=/final/index.php/ou_structure/createnode
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "move.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('move.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/move.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/update.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/update.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/update.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/create.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "delete.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('delete.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/delete.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "properties.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('properties.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/properties.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rename.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/rename.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/rename.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "move.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('move.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/move.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "delete.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('delete.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/delete.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "properties.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('properties.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/properties.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/create.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/update.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/update.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/update.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rename.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/rename.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/rename.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "move.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('move.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/move.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/update.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/update.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/update.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "properties.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('properties.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/properties.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "images/rename.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('images/rename.p...')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/images/rename.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "create.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('create.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/create.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 08:57:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "delete.png".' in F:\my xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('delete.png')
+#1 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#3 {main}
+REQUEST_URI=/final/index.php/delete.png
+HTTP_REFERER=http://localhost/final/index.php/ou_structure/tree
+---
+2014/06/09 09:00:24 [warning] [application] Failed to set unsafe attribute "roles" of "Users".
+in F:\my xampp\htdocs\final\protected\controllers\UsersController.php (124)
+in F:\my xampp\htdocs\final\index.php (18)
+2014/06/09 09:01:46 [warning] [application] Failed to set unsafe attribute "roles" of "Users".
+in F:\my xampp\htdocs\final\protected\controllers\UsersController.php (124)
+in F:\my xampp\htdocs\final\index.php (18)
+2014/06/09 09:02:10 [error] [exception.CException] exception 'CException' with message 'Property "Module.orgId" is not defined.' in F:\my xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('orgId')
+#1 F:\my xampp\htdocs\yii\framework\validators\CNumberValidator.php(78): CActiveRecord->__get('orgId')
+#2 F:\my xampp\htdocs\yii\framework\validators\CValidator.php(213): CNumberValidator->validateAttribute(Object(Module), 'orgId')
+#3 F:\my xampp\htdocs\yii\framework\base\CModel.php(159): CValidator->validate(Object(Module), NULL)
+#4 F:\my xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(805): CModel->validate(NULL)
+#5 F:\my xampp\htdocs\final\protected\controllers\ModuleController.php(72): CActiveRecord->save()
+#6 F:\my xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): ModuleController->actionCreate()
+#7 F:\my xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#14 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#16 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('module/create')
+#17 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#18 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#19 {main}
+REQUEST_URI=/final/index.php/module/create
+HTTP_REFERER=http://localhost/final/index.php/module/create
+---
+2014/06/09 09:07:59 [warning] [application] Failed to set unsafe attribute "departmentId" of "Asset".
+in F:\my xampp\htdocs\final\protected\controllers\AssetController.php (71)
+in F:\my xampp\htdocs\final\index.php (18)
+2014/06/09 09:07:59 [warning] [application] Failed to set unsafe attribute "categoryId" of "Asset".
+in F:\my xampp\htdocs\final\protected\controllers\AssetController.php (71)
+in F:\my xampp\htdocs\final\index.php (18)
+2014/06/09 09:07:59 [warning] [application] Failed to set unsafe attribute "tagsUser" of "Asset".
+in F:\my xampp\htdocs\final\protected\controllers\AssetController.php (71)
+in F:\my xampp\htdocs\final\index.php (18)
+2014/06/09 09:11:46 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('module/admin')
+#9 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#11 {main}
+REQUEST_URI=/final/index.php/module/admin
+HTTP_REFERER=http://localhost/final/index.php/module/create
+---
+2014/06/09 09:11:55 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('module/admin')
+#9 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#11 {main}
+REQUEST_URI=/final/index.php/module/admin
+HTTP_REFERER=http://localhost/final/index.php/permissions/admin
+---
+2014/06/09 09:11:59 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('module/admin')
+#9 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#11 {main}
+REQUEST_URI=/final/index.php/module/admin
+HTTP_REFERER=http://localhost/final/index.php/module/create
+---
+2014/06/09 09:12:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('module/admin')
+#9 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#11 {main}
+REQUEST_URI=/final/index.php/module/admin
+---
+2014/06/09 09:13:26 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('module/admin')
+#9 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#11 {main}
+REQUEST_URI=/final/index.php/module/admin
+---
+2014/06/09 09:13:30 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('module/admin')
+#9 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#11 {main}
+REQUEST_URI=/final/index.php/module/admin
+---
+2014/06/09 09:13:43 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php:182
+Stack trace:
+#0 F:\my xampp\htdocs\yii\framework\web\auth\CAccessControlFilter.php(145): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 F:\my xampp\htdocs\yii\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 F:\my xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 F:\my xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 F:\my xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 F:\my xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#6 F:\my xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 F:\my xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('module/admin')
+#9 F:\my xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 F:\my xampp\htdocs\final\index.php(18): CApplication->run()
+#11 {main}
+REQUEST_URI=/final/index.php/module/admin
+HTTP_REFERER=http://localhost/final/index.php/module/create
+---

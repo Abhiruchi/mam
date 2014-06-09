@@ -120,6 +120,11 @@ class Tags extends CActiveRecord
 		
 	    return $ret;
 		}
+		
+public function getModelName()
+	{
+		return __CLASS__;
+	}
 	
 }
 

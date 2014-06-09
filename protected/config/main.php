@@ -45,7 +45,10 @@ return array(
 
 	'modules'=>array(
 		// uncomment the following to enable the Gii tool
-		
+		'media'=>array(
+        // Base dir for media browser (app/files):
+        'baseDir'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'file',
+    ),
 		'gii'=>array(
 			'class'=>'system.gii.GiiModule',
 			'password'=>'gii',
@@ -120,7 +123,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=final_28',
+			'connectionString' => 'mysql:host=localhost;dbname=db',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => 'root',
