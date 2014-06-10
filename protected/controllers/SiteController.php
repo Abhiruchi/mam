@@ -33,12 +33,14 @@ class SiteController extends Controller
 		$this->render('index');
 	}
 	
-public function actionViewer()
+	public function actionViewer($viewer)
 	{
 		
+	//	print_r($viewer);
+		//die();
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('viewer');
+		$this->render('viewer', $viewer);
 	}
 
 public function actionAsset()

@@ -1,4 +1,5 @@
 <div class="form">
+
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	'id'=>'Permissions-change',
 	'layout'=>TbHtml::FORM_LAYOUT_HORIZONTAL,

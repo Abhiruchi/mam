@@ -9,9 +9,11 @@
 	#headerA{
 	width:10%;
 	padding-left:4em;}
+	.radio.inline, .checkbox.inline{width:34%; margin-left:20px !important;}
+
 
 </style>
-<div class="form">
+<div class="form" style="margin-top:3em;">
 
     <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	'id'=>'asset-form',
@@ -27,7 +29,9 @@
     <p class="help-block">Fields with <span class="required">*</span> are required.</p>
 
     <?php echo $form->errorSummary($model); ?>
-
+	
+	<div class="span12" style="margin-left:0;">
+	<div class="span5" style="margin-left:0;">
 			<?php echo $form->fileFieldControlGroup($model,'file'); ?>
 			
 		    <?php echo $form->textFieldControlGroup($model,'assetName',array('span'=>3,'maxlength'=>70,'label'=>'File Name')); ?>
@@ -45,16 +49,30 @@
          	<?php
 			echo $form->dropDownListControlGroup($model,'categoryId',CHtml::listData(Category::model()->findAll('orgId=:orgId',array(':orgId'=>$orgId)), 'cat_id', 'name'),array('label'=>'Category')); ?>
             
-			<?php  echo TbHtml::inlinecheckBoxListControlGroup('tags','',CHtml::listData(Tags::model()->findAll(), 'tagId', 'tagName'), array('span'=>3,'label'=>'Tags','help' => '<strong>Note:</strong> Add multiple tags with commas.')); ?>	 
+			<?php // echo TbHtml::inlinecheckBoxListControlGroup('tags','',CHtml::listData(Tags::model()->findAll(), 'tagId', 'tagName'), array('span'=>3,'label'=>'Tags','help' => '<strong>Note:</strong> Add multiple tags with commas.')); ?>	 
 	 
-         	<?php echo $form->textFieldControlGroup($model,'tagsUser',array('span'=>3,'maxlength'=>70,'label'=>'Add Tags')); ?>
+         	<?php //echo $form->textFieldControlGroup($model,'tagsUser',array('span'=>3,'maxlength'=>70,'label'=>'Add Tags')); ?>
          	
 
+		</div><!-- end of span 7 -->
+
+			<div class="span5" style="margin-top:3.5em;">
+				<?php echo TbHtml::inlinecheckBoxListControlGroup('tags','',CHtml::listData(Tags::model()->findAll(), 'tagId', 'tagName'), array('span'=>3,'label'=>'Tags')); ?>	 
+	 			<?php echo $form->textFieldControlGroup($model,'tagsUser',array('span'=>3,'maxlength'=>70,'label'=>'Add Tags')); ?>
+         	
+	 		
+	 		</div>
+
+		</div><!-- end of span12 -->
+			
+			
             <?php echo $form->textAreaControlGroup($model,'description',array('rows'=>4,'span'=>8)); ?>
 
             <?php echo $form->textAreaControlGroup($model,'comment',array('rows'=>1,'span'=>8)); ?>
 
-        <div class="span9 offset1">
+		
+
+		        <div class="span9 offset1">
 		<?php
 			
 			$dataProvider = new CActiveDataProvider('Ou_structure',array('criteria'=>array(

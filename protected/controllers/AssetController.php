@@ -32,7 +32,7 @@ class AssetController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','viewer'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -55,7 +55,18 @@ class AssetController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-
+	public function actionViewer($id)
+	{
+		$model= $this->loadModel($id);
+		$a = $model->file;
+	//	print_r($model->file);
+	//	die();
+	//	print_r($viewer);
+		//die();
+		// renders the view file 'protected/views/site/index.php'
+		// using the default layout 'protected/views/layouts/main.php'
+		$this->render('viewer', array('a'=>$a));
+	}
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
@@ -69,11 +80,35 @@ class AssetController extends Controller
 
 		if (isset($_POST['Asset'])) {
 			$model->attributes=$_POST['Asset'];
+			
 			$model->file=CUploadedFile::getInstance($model,'file');
-			 
+		//	
+			$ext=$model->file->extensionName;
+			//$model->createDate=
+			// 
 			if ($model->save()) {
-				$model->file->saveAs('C:/xampp/htdocs/final/upload/img/'.$model->file->getName());
+				$model->type=$model->file->getType();
+				$model->size = $model->file->getSize();
+				$orgId=Yii::app()->user->getId();
+				$fileName=$model->assetId;
+				$categoryId=$_POST['Asset']['categoryId'];
+				$old = umask(0);
+
+
+				if (!is_dir(Yii::app()->basePath . '/../upload/' . $orgId . '/'.$categoryId.'/' )) {
+                //mkdir(Yii::app()->basePath . '/../upload/' . $orgId . '/'.$categoryId.'/',0777 ,true);
+                mkdir(Yii::app()->basePath . '/../upload/' . $orgId . '/'.$categoryId.'/',0777 ,true);
+				}
+				umask($old);
 				
+	/*	if (!is_dir(Yii::app()->basePath . '/../upload/' .'/' )) {
+                mkdir(Yii::app()->basePath . '/../upload/' . $orgId . '/'.$categoryId.'/',0777 ,true);
+                mkdir(Yii::app()->basePath . '/../upload/' .'/',0777 ,true);
+				}*/
+				
+				$model->file->saveAs(Yii::app()->basePath.'/../upload/'.$orgId.'/'.$categoryId.'/'.$fileName.'.dat');
+				
+			//	$model->file->saveAs(Yii::app()->basePath.'/../upload/'.$fileName);
 				if(!empty($_POST['read'])){
 				$read = $_POST['read'];
 				foreach($read as $readRow){
@@ -85,7 +120,7 @@ class AssetController extends Controller
        			}}
 				
        			
-       			if(!empty($_POST['edit'])){
+       			if(!empty($_POST['write'])){
 				$write = $_POST['write'];
        			foreach($write as $writeRow){
 					$AssetOuFilep = new AssetOuFilep;
