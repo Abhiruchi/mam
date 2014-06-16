@@ -7,7 +7,7 @@ class RoleController extends Controller
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
-
+	public $rid;
 	/**
 	 * @return array action filters
 	 */
@@ -32,7 +32,7 @@ class RoleController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','admin','permission_change2','permission_change','rfu'),
+				'actions'=>array('create','update','admin','permission_change2','permission_change','rfu','view_permission'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -61,6 +61,46 @@ class RoleController extends Controller
 		$this->render('rfu');
 	}
 	
+	public function actionView_Permission($id)
+	{
+		//$dataProvider=new CActiveDataProvider('Permissions');
+		
+		$model= $this->loadModel($id);
+		
+		if(isset($_POST['buttonCancel']))
+        {
+         $this->redirect(Yii::app()->homeUrl);
+        }
+       
+
+        if (isset($_POST['buttonUpdate'])) {
+        	
+        	$module=ModuleOrganisation::model()->findAll('orgId=:orgId',array(':orgId'=>Yii::app()->user->getId()));
+        	$data = count($module);
+        	RoleHasPermissions::model()->deleteAll('rid=:rid',array(':rid'=>$model->rid));
+        	//print_r($data);die();
+        	$number = 0;
+        	while($number<$data){
+        		if(!empty($_POST['CB'.$number])){
+        		foreach($_POST['CB'.$number] as $rec)
+        		{
+        		  $RoleHasPermissions = new RoleHasPermissions;
+        		  $RoleHasPermissions->rid = $model->rid;
+        		  $RoleHasPermissions->pid = $rec;
+        		  $RoleHasPermissions->save();
+        		}}
+        		$number++;
+        	}
+        	$this->redirect(array('/role'));
+        }
+        
+        
+		$this->render('view_permission',array(
+			'model'=>$model,
+		));
+	}
+	
+	
 	/*public function actionPermission_change($id)
 	{
 		$this->render('permission_change',array(
@@ -88,15 +128,42 @@ class RoleController extends Controller
 		if (isset($_POST['Role'])) {
 			$model->attributes=$_POST['Role'];
 			
+			$weight = $model->weight;
+			
+			$sq = "select weight from role where orgId = :orgId";
+			$command = Yii::app()->db->createCommand($sq);
+			$command->bindParam(":orgId",$orgId,PDO::PARAM_INT);
+			$dataReader = $command->query();
+			
+			while (1) {
+				$flag = 0;
+				while (($model1 = $dataReader->read())!== false)
+				{
+					$a = $model1['weight'];
+					print_r($a);
+					die();
+					if ($a == $weight) {
+						$model1['weight'] = $weight + 1;
+						$flag = 1;
+					}		
+				}
+				$weight = $weight + 1;
+				if ($flag == 0) {
+					break;
+				}
+			}
+			
 			$connection = Yii::app()->db;
 			$id = Yii::app()->user->getId();
 			$name = $model->name;
 			$weight = $model->weight;
-			
-			$sql = "insert into role (name, weight) values (:name, :weight)";
+			$orgId = Yii::app()->user->getId();
+			$description=$model->description;
+			$sql = "insert into role (name, weight, description, orgId) values (:name, :weight, :description, :orgId)";
 			$command = $connection->createCommand($sql);
 			$command->bindParam(":name",$name,PDO::PARAM_STR);
-			
+			$command->bindParam(":description",$description,PDO::PARAM_STR);
+			$command->bindParam(":orgId",$orgId,PDO::PARAM_STR);
 			$command->bindParam(":weight",$weight,PDO::PARAM_STR);
 			$command->execute(); 
 			
@@ -123,6 +190,30 @@ class RoleController extends Controller
 
 		if (isset($_POST['Role'])) {
 			$model->attributes=$_POST['Role'];
+			
+			$weight = $model->weight;
+			
+			$sq = "select weight from role where orgId = :orgId";
+			$command = Yii::app()->db->createCommand($sq);
+			$command->bindParam(":orgId",$orgId,PDO::PARAM_INT);
+			$dataReader = $command->query();
+			
+			while (1) {
+				$flag = 0;
+				while (($model1 = $dataReader->read())!== false)
+				{
+					$a = $model1['weight'];
+					if ($a == $weight) {
+						$model1['weight'] = $weight + 1;
+						$flag = 1;
+					}		
+				}
+				$weight = $weight + 1;
+				if ($flag == 0) {
+					break;
+				}
+			}
+			
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->rid));
 			}
@@ -158,12 +249,91 @@ class RoleController extends Controller
 	 */
 	public function actionIndex()
 	{
+		$model=new Role;
 		$orgId = Yii::app()->user->getId();
-		//$dataProvider=new CActiveDataProvider('Role', array('criteria'=>array('condition'=>  'orgId = :orgId', 'params'=>array(':orgId'=>$orgId),
-		$dataProvider = new CActiveDataProvider('Role');
-		//),));
+		$dataProvider=new CActiveDataProvider('Role', array('criteria'=>array('condition'=>  'orgId = :orgId', 'params'=>array(':orgId'=>$orgId),
+		//$dataProvider = new CActiveDataProvider('Role');
+		),));
+		
+		
+		if (isset($_POST['Role'])) {
+			
+			$model->attributes=$_POST['Role'];
+			
+			$weight = $model->weight;
+			
+			$sq = "select weight from role where orgId = :orgId";
+			$command = Yii::app()->db->createCommand($sq);
+			$command->bindParam(":orgId",$orgId,PDO::PARAM_INT);
+			$dataReader = $command->query();
+			$flag = 0;
+			while (($model1 = $dataReader->read())!== false)
+				{
+					$a = $model1['weight'];
+					if ($a == $weight) {
+					$connection = Yii::app()->db;
+					$sql = "update role set weight = weight + 1 where weight >= :weight";
+					$command = $connection->createCommand($sql);
+					$command->bindParam(":weight",$a,PDO::PARAM_INT);
+					$command->execute();
+					$flag = 0;
+					break;
+					}
+				}
+				
+				
+			/*while (1) {
+				$flag = 0;
+				while (($model1 = $dataReader->read())!== false)
+				{
+					$a = $model1['weight'];
+					
+					if ($a == $weight) {
+						
+						$abc = $weight + 1;
+						
+						$connection = Yii::app()->db;
+						$sql = "update role set weight = :new where weight = :weight";
+						$command = $connection->createCommand($sql);
+						$command->bindParam(":weight",$a,PDO::PARAM_INT);
+						$command->bindParam(":new",$abc,PDO::PARAM_INT);
+						
+						$command->execute();
+						$flag = 1;
+					}		
+				}
+				$weight = $weight + 1;
+				if ($flag == 0) {
+					break;
+				}
+			}
+			
+			*/
+			
+			/*
+			$connection = Yii::app()->db;
+			$id = Yii::app()->user->getId();
+			$name = $model->name;
+			$weight = $model->weight;
+			$orgId = Yii::app()->user->getId();
+			$description = $model->description;
+			$sql = "insert into role (name, weight, description, orgId) values (:name, :weight, :description, :orgId)";
+			$command = $connection->createCommand($sql);
+			$command->bindParam(":name",$name,PDO::PARAM_STR);
+			$command->bindParam(":description",$description,PDO::PARAM_STR);
+			$command->bindParam(":orgId",$orgId,PDO::PARAM_STR);
+			$command->bindParam(":weight",$weight,PDO::PARAM_STR);
+			
+			$command->execute(); 
+			*/
+				$model->orgId =  Yii::app()->user->getId();
+				if ($model->save())
+				$this->redirect(array('index'));
+			
+		}
+		
 		$this->render('index',array(
-			'dataProvider'=>$dataProvider,
+			'model'=>$model,
 		));
 	}
 	
@@ -194,6 +364,25 @@ class RoleController extends Controller
 		$this->render('admin',array(
 			'model'=>$model,
 		));
+	}
+	
+	public function isChecked($id1, $id2){
+		
+		$connection = Yii::app()->db;
+		
+		$sql = "select pid from role_has_permissions where rid = :rid";
+		$command = $connection->createCommand($sql);
+		$command->bindParam(":rid",$id1,PDO::PARAM_INT);
+		$dataReader = $command->query();
+		while (($model1 = $dataReader->read())!== false)
+		{
+			if ($model1['pid'] == $id2) {
+				return true;
+			}
+		}
+		
+		return false;
+
 	}
 
 	public function actionPermission_change($id)

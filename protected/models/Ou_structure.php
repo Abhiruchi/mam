@@ -45,6 +45,8 @@ class Ou_structure extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('name', 'required'),
+			array('description', 'required'),
+			array('dept_code', 'required'),
 			//array('level', 'numerical', 'integerOnly'=>true),
 		//	array('root, lft, rgt', 'length', 'max'=>10),
 			array('name', 'length', 'max'=>128),
@@ -83,6 +85,7 @@ class Ou_structure extends CActiveRecord
 			'level' => 'Level',
 			'name' => 'Name',
 			'description' => 'Description',
+			'dept_code' => 'Dept_code',
 		);
 	}
 
@@ -111,6 +114,7 @@ class Ou_structure extends CActiveRecord
 		$criteria->compare('level',$this->level);
 		$criteria->compare('name',$this->name,true);
 		$criteria->compare('description',$this->description,true);
+		$criteria->compare('dept_code',$this->dept_code,true);
 		$criteria->compare('orgId',$this->orgId,true);
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

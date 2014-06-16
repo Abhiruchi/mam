@@ -28,11 +28,11 @@ class AssetController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','loadusers','loaduserstable'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','viewer'),
+				'actions'=>array('create','update','loadusers','loaduserstable'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -55,24 +55,14 @@ class AssetController extends Controller
 			'model'=>$this->loadModel($id),
 		));
 	}
-	public function actionViewer($id)
-	{
-		$model= $this->loadModel($id);
-		$a = $model->file;
-	//	print_r($model->file);
-	//	die();
-	//	print_r($viewer);
-		//die();
-		// renders the view file 'protected/views/site/index.php'
-		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('viewer', array('a'=>$a));
-	}
+
 	/**
 	 * Creates a new model.
 	 * If creation is successful, the browser will be redirected to the 'view' page.
 	 */
 	public function actionCreate()
-	{
+	{	if(!Yii::app()->user->checkAccess('create'))
+ // Yii::app()->end();
 		$model=new Asset;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -80,17 +70,39 @@ class AssetController extends Controller
 
 		if (isset($_POST['Asset'])) {
 			$model->attributes=$_POST['Asset'];
-			
+
 			$model->file=CUploadedFile::getInstance($model,'file');
-		//	
-			$ext=$model->file->extensionName;
+			//$model->type=$model->file->getType();
+			//$model->type=$model->file->extensionName;
 			//$model->createDate=
-			// 
+			
+			
+			/* getting the records from list of primary keys 
+			//print_r($_POST['users']);die();
+			$usersIds = $_POST['users'];
+			$userRecords = Users::model()->findAllByPk($usersIds);
+			//print_r($userRecords);die();
+
+			foreach($userRecords as $record){
+				print_r($record->name."\n");
+			}
+			die();
+			
+			*/
+			
+			$model->categoryId = $_POST['Asset']['categoryId'];
+			
+			if(!empty($_POST['tags']))
+			{
+				$tags = $_POST['tags'];
+			}
+			
+			
+			
 			if ($model->save()) {
-				$model->type=$model->file->getType();
-				$model->size = $model->file->getSize();
+
 				$orgId=Yii::app()->user->getId();
-				$fileName=$model->assetId;
+				$fileName=$model->assetId.'.dat';
 				$categoryId=$_POST['Asset']['categoryId'];
 				$old = umask(0);
 
@@ -100,15 +112,37 @@ class AssetController extends Controller
                 mkdir(Yii::app()->basePath . '/../upload/' . $orgId . '/'.$categoryId.'/',0777 ,true);
 				}
 				umask($old);
+
+
+				$model->file->saveAs(Yii::app()->basePath.'/../upload/'.$orgId.'/'.$categoryId.'/'.$fileName);
+
 				
-	/*	if (!is_dir(Yii::app()->basePath . '/../upload/' .'/' )) {
-                mkdir(Yii::app()->basePath . '/../upload/' . $orgId . '/'.$categoryId.'/',0777 ,true);
-                mkdir(Yii::app()->basePath . '/../upload/' .'/',0777 ,true);
-				}*/
 				
-				$model->file->saveAs(Yii::app()->basePath.'/../upload/'.$orgId.'/'.$categoryId.'/'.$fileName.'.dat');
 				
-			//	$model->file->saveAs(Yii::app()->basePath.'/../upload/'.$fileName);
+				if(!empty($_POST['tags'])){
+				$tag = $_POST['tags'];
+				foreach($tag as $tagRow){
+					$AssetTag = new AssetTags;
+            	    $AssetTag->assetId = $model->assetId;
+            	    $AssetTag->tagId = $tagRow ;
+                	$AssetTag->save();
+       			}}
+				
+       			if(!empty($_POST['Asset']['tagsUser'])){
+       			$tagsUser=explode(",",$_POST['Asset']['tagsUser']);
+       			foreach($tagsUser as $tagsRow){
+					$Tags = new Tags;
+            	    $Tags->tagName = $tagsRow;
+            	    $Tags->orgId  = Yii::app()->user->getId();
+                	$Tags->save();
+                	$AssetTag1 = new AssetTags;
+                	$AssetTag1->assetId = $model->assetId;
+                	$AssetTag1->tagId = $Tags->tagId;
+                	$AssetTag1->save();
+                	
+       			}
+       			}
+				
 				if(!empty($_POST['read'])){
 				$read = $_POST['read'];
 				foreach($read as $readRow){
@@ -118,9 +152,9 @@ class AssetController extends Controller
             	    $AssetOuFilep->fpId = 0;
                 	$AssetOuFilep->save();
        			}}
-				
+
        			
-       			if(!empty($_POST['write'])){
+       			if(!empty($_POST['edit'])){
 				$write = $_POST['write'];
        			foreach($write as $writeRow){
 					$AssetOuFilep = new AssetOuFilep;
@@ -130,7 +164,7 @@ class AssetController extends Controller
                 	$AssetOuFilep->save();
        			}}
        			
-				
+
 				if(!empty($_POST['edit'])){
 				$edit = $_POST['edit'];
 				foreach($edit as $editRow){
@@ -140,7 +174,7 @@ class AssetController extends Controller
             	    $AssetOuFilep->fpId = 2;
                 	$AssetOuFilep->save();
        			}}
-				
+
        			
 				if(!empty($_POST['delete'])){
 				$delete = $_POST['delete'];
@@ -152,7 +186,7 @@ class AssetController extends Controller
                 	$AssetOuFilep->save();
        			}}
 			}
-			
+
 			$this->redirect(array('view','id'=>$model->assetId));
 		}
 
@@ -259,4 +293,38 @@ class AssetController extends Controller
 			Yii::app()->end();
 		}
 	}
+	
+	public function actionLoadusers()
+		{
+   			$data=UsersDepartment::model()->findAll('id=:id', 
+   			array(':id'=>(int) $_POST['ou_id']));
+ 
+ 			 // $data=CHtml::listData($data,'uid','city_name');
+  
+  			 foreach($data as $data1){
+  			 $userRow = Users::model()->find('uid=:uid',array(':uid'=>$data1->uid));
+     		echo "<option value='$userRow->uid'>$userRow->name</option>";
+   		}
+  		// foreach($data as $value=>$city_name)
+  		// echo CHtml::tag('option', array('value'=>$value),CHtml::encode($city_name),true);
+	}
+	
+	public function actionLoaduserstable(){
+			
+			//print_r($_POST['users']);die();
+			//$usersIds = $_POST['users'];
+			//$userRecords = Users::model()->findAllByPk($usersIds);
+			//print_r($userRecords);die();
+
+			//foreach($userRecords as $record){
+			//	print_r($record->name."\n");
+			//}
+			//die();
+			
+		echo "hellooo";
+		
+
+	}
+
 }
+

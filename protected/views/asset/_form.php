@@ -57,14 +57,118 @@
 		</div><!-- end of span 7 -->
 
 			<div class="span5" style="margin-top:3.5em;">
-				<?php echo TbHtml::inlinecheckBoxListControlGroup('tags','',CHtml::listData(Tags::model()->findAll(), 'tagId', 'tagName'), array('span'=>3,'label'=>'Tags')); ?>	 
+				<?php echo TbHtml::inlinecheckBoxListControlGroup('tags','',
+					CHtml::listData(Tags::model()->findAll('orgId=:orgId',array(':orgId'=>$orgId)), 'tagId', 'tagName'), 
+					array('span'=>3,'label'=>'Tags')); ?>	 
 	 			<?php echo $form->textFieldControlGroup($model,'tagsUser',array('span'=>3,'maxlength'=>70,'label'=>'Add Tags')); ?>
          	
 	 		
 	 		</div>
 
 		</div><!-- end of span12 -->
+		
+		<!--  -->
 			
+			<?php                                   
+  				echo CHtml::dropDownList('ou_id','', 
+  				CHtml::listData(Ou_structure::model()->findAll('root=:root',array(':root'=>$root)), 'id', 'name'),
+  
+  				array(
+    			'prompt'=>'Select Department',
+    			'ajax' => array(
+    			'type'=>'POST', 
+    			'url'=>Yii::app()->createUrl('Asset/loadusers'), 
+    			'update'=>'#users', //or 'success' => 'function(data){...handle the data in the way you want...}',
+  				'data'=>array('ou_id'=>'js:this.value'),
+  				))); 
+ 
+ 			echo CHtml::dropDownList('users','', array(), array('prompt'=>'Select Users','multiple'=>true),
+ 			
+ 				array(
+    			'prompt'=>'',
+    			'ajax' => array(
+    			'type'=>'POST', 
+    			'url'=>Yii::app()->createUrl('Asset/loaduserstable'), 
+    			'update'=>'#userstable', //or 'success' => 'function(data){...handle the data in the way you want...}',
+  				'data'=>array('users'=>'js:this.value'),
+  				)));
+ 			?>
+ 			
+ 			
+ 
+			
+				<?php 				
+
+				$dataProvider = new CActiveDataProvider('Users');
+				
+				//$usersIds = $_POST['users'];
+				//$userRecords = Users::model()->findAllByPk($usersIds);
+				//$dataProvider = Users::model()->findAllByPk($usersIds);;
+				
+				$this->widget('bootstrap.widgets.TbGridView', array(
+				
+				'id'=>'userstable',
+				'dataProvider'=>$dataProvider,
+				'rowHtmlOptionsExpression' => 'array("id"=>$data->uid)',
+				'columns'=>array(
+    			array('name'=>'name','header'=>'Departments'),    /*in header give the role name while passing*/
+	 			array('header'=>'Read','value'=>'','id'=>'headerA'),
+	    		array(
+	    		    
+	        		'class'=>'CCheckBoxColumn',
+	        		'id'=>'read',
+	        		'selectableRows'=>2,
+	    			'header'=>'Read',
+	    		
+	    		),    	
+	    		array('header'=>'Write','value'=>'','id'=>'headerA'),
+	    		array(
+	        		'class'=>'CCheckBoxColumn',
+	        		'id'=>'write',
+	        		'selectableRows'=>2,
+	    			'header'=>'Write',
+	    		),
+	    		array('header'=>'Edit','value'=>'','id'=>'headerA'),
+	    		array(
+	        		'class'=>'CCheckBoxColumn',
+	        		'id'=>'edit',
+	        		'header'=>'Edit',
+	    			'selectableRows'=>2,
+	    		),
+	    		array('header'=>'Delete','value'=>'','id'=>'headerA'),
+	    		array(
+	        		'class'=>'CCheckBoxColumn',
+	        		'id'=>'delete',
+	        		'selectableRows'=>2,
+	    			'header'=>'Delete',
+	    		)    	
+	      ),
+   		)
+		);
+				?>			
+						
+			
+										
+			
+			<?php /*echo CHtml::ajaxSubmitButton('Form Ajax Submit Button',
+                CHtml::normalizeUrl(array('Asset/getuserstable')), 
+                
+				array('success'=>'funcztion(){$("#mydialog").dialog("close");}',
+                      'update'=>'#myDiv'                            ),
+                array('name' => 'run', 'class' => 'btn btn-success')
+          ); */ ?>
+			
+			
+				
+			<?php echo $form->radioButtonListControlGroup($model, 'publication', array(
+        		'yes',
+        		'no',
+ 			   )); ?>
+ 			<?php echo $form->radioButtonListControlGroup($model, 'onlineEditable', array(
+        		'yes',
+        		'no',
+ 		   )); ?>
+ 
 			
             <?php echo $form->textAreaControlGroup($model,'description',array('rows'=>4,'span'=>8)); ?>
 
@@ -128,25 +232,6 @@
 	?>
 	
 	
-	<?php 
-	
-	/*	echo TbHtml::dropDownList('department','',CHtml::listData(Ou_structure::model()->findAll(),'id','name'),array(
-		  'onKeyUp'=>CHtml::ajax(
-		      array(
-		      'type'=>'POST',
-		      'dataType'=>'html',
-		      'data'=>array(
-		        'id'=>'js:department.value' 
-		      ),
-		      'update'=>'#user_select',
-		      'url'=>Yii::app()->createUrl('create/searchajax'),
-		      
-		      )
-		
-		))
-		);
-	*/
-	?>
 		</div>
 		
 		<div class="">

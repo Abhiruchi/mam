@@ -80,3 +80,17 @@ If you have business inquiries or other questions, please fill out the following
 </div><!-- form -->
 
 <?php endif; ?>
+
+<?php
+ 
+$this->widget('ext.Yiinior.Yiinior', array(
+'video'=>"http://localhost/final/video/a.mkv", //path to video file
+'id' => 'yiinior',
+'width'=>640,
+'height'=>480,
+'autoplay'=>'false',
+'autohide'=>'true',
+'bgcolor'=>'#000'
+));
+ 
+?>

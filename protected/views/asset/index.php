@@ -38,4 +38,3 @@ $gridColumns = array(
 	'columns'=> $gridColumns,
 ));
  ?>
-

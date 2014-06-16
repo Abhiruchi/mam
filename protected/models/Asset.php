@@ -21,7 +21,7 @@
  */
 class Asset extends CActiveRecord
 {
-	
+
 	public $write;
 	public $file;
 	public $departmentId;
@@ -37,11 +37,11 @@ class Asset extends CActiveRecord
 	/**
 	 * @return array validation rules for model attributes.
 	 */
-	
-	
+
+
 	public $tagsUser;
 	public $gview;
-public function rules()
+	public function rules()
 	{
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
@@ -49,12 +49,6 @@ public function rules()
 			//array('file, assetId, assetName, publication, onlineEditable, ownerId', 'required'),
 			//array('file,assetId,assetName,ownerId', 'required'),
 			array('file', 'required'),
-			array('file', 'length', 'max'=>245),
-			 array('file', 'file', 'types'=>'jpg, gif, png, zip, docx, doc, odp, odt, pdf, ppt, pptx, mp3, mp4, hd, flv, ogg, MP4, OGG',
-			 'maxFiles' => 14,
-'maxSize'=>1024 * 1024 * 10, // 10MB
-'tooLarge'=>'The file was larger than 10MB. Please upload a smaller file.',
-'allowEmpty'=>1),
 			array('assetId, status, publication, onlineEditable, size, ownerId', 'numerical', 'integerOnly'=>true),
 			array('assetName, reviewer', 'length', 'max'=>45),
 			array('type', 'length', 'max'=>10),
@@ -73,7 +67,9 @@ public function rules()
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-		'users'=>array(self::BELONGS_TO,'Users','ownerId'),
+		 'users'=>array(self::BELONGS_TO,'Users','ownerId'),
+		'category'=>array(self::BELONGS_TO,'Category','categoryId'),
+
 		);
 	}
 
@@ -97,7 +93,6 @@ public function rules()
 			'reviewer' => 'Reviewer',
 			'reviewerComments' => 'Reviewer Comments',
 			'ownerId' => 'Owner',
-			'categoryId' => 'CategoryId',
 		);
 	}
 
@@ -133,7 +128,7 @@ public function rules()
 		$criteria->compare('reviewer',$this->reviewer,true);
 		$criteria->compare('reviewerComments',$this->reviewerComments,true);
 		$criteria->compare('ownerId',$this->ownerId);
-		$criteria->compare('categoryId',$this->categoryId);
+
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
 		));
@@ -149,13 +144,38 @@ public function rules()
 	{
 		return parent::model($className);
 	}
-	
-	public function beforeSave()
-	{
-		$this->type = $this->file->getType();
-		$this->size = $this->file->getSize();
-		$this->status=0;
-		return parent::beforeSave();
-	}
-	
+
+	public function beforeSave(){
+
+              $this->type=$this->file->getType();
+              $this->size=$this->file->getSize();
+              $this->createDate=new CDbExpression('NOW()');
+              return parent::beforeSave();
+               }
+
+public function getStatus(){
+    	if($this->status==0)
+    	 return "NOT REVIEWED";
+    	elseif($this->status==1)
+    	 return "REVIEWED";
+     	elseif($this->status==2)
+    	 return "CHECKOUT";
+    	elseif($this->status==3)
+    	 return "BLOCKED";
+    }
+    public function getPublication(){
+     if($this->publication==0)
+      return "Yes";
+     if($this->publication==1)
+      return "No";
+    
+    }
+	public function getOnlineEditable(){
+     if($this->onlineEditable==0)
+      return "Yes";
+     if($this->onlineEditable==1)
+      return "No";
+    
+    }
+               
 }
